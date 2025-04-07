@@ -1,0 +1,19 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/logo';
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/footer';
+@use 'blocks/hero';
+@use 'blocks/scrollUp';
+@use 'blocks/about';
+@use 'blocks/how-to-farm';
+@use 'blocks/headind';
+@use 'blocks/types';
+@use 'blocks/card';
+@use 'blocks/socials';

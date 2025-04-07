@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.socials {
+	&__list {
+		display: flex;
+		column-gap: fluid(20, 10);
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+
+		@include hover {
+			top: rem(-5);
+		}
+	}
+
+	&__link {
+		width: fluid(40, 40);
+		height: fluid(40, 40);
+		background-color: #eab56c;
+		border-radius: rem(5);
+		border: 2px solid var(--color-dark);
+		justify-content: center;
+		align-items: center;
+
+		&::before {
+			@include flex-center;
+		}
+	}
+}

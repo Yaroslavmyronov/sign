@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.how-to-farm {
+	background: rgb(241, 165, 83);
+	position: relative;
+	padding-block: rem(100);
+
+	&__heading {
+		text-align: center;
+		margin-bottom: rem(50);
+		h2 {
+			margin-top: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-inline: rem(-15);
+	}
+
+	&__item {
+		width: 33.33333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		padding-inline: rem(15);
+
+		@include tablet {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@include mobile {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		@include tablet-above {
+			&:nth-of-type(2) {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	&__content {
+		background: rgb(212, 114, 43);
+	}
+}

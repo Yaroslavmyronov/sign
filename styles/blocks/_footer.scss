@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.footer {
+	background: rgb(162, 84, 27);
+	&__inner {
+	}
+
+	&__body {
+		padding-block: fluid(70, 35);
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: start;
+		column-gap: fluid(80, 20);
+
+		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: rem(40);
+		}
+
+		@include mobile-s {
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: rem(20);
+		}
+
+		&-column {
+			// display: grid;
+			// row-gap: fluid(36, 16);
+		}
+
+		&-title {
+			padding-bottom: rem(10);
+			margin-bottom: rem(20);
+			width: max-content;
+			border-bottom: rem(2) solid rgb(251, 227, 84);
+			color: var(--color-light);
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			row-gap: fluid(18, 8);
+		}
+
+		&-link {
+			font-size: rem(14);
+			color: var(--color-light);
+		}
+	}
+}

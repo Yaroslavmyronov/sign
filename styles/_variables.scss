@@ -1,0 +1,21 @@
+@use 'helpers' as *;
+
+:root {
+	--color-light: #ffffff;
+	--color-orange: #f6774a;
+	--color-light-yellow: #fff9cc;
+	--color-yellow: #ffc803;
+	--color-dark: #000;
+
+	--font-family-secondary: 'Alfa Slab One', sans-serif;
+	--font-family-base: 'Poppins', sans-serif;
+
+	--container-width: #{rem(1140)};
+	--container-padding-x: #{rem(16)};
+
+	--transition-duration: 0.2s;
+
+	@include laptop {
+		--container-width: #{rem(1280)};
+	}
+}

@@ -1,0 +1,102 @@
+@use '../helpers' as *;
+
+.hero {
+	position: relative;
+	background: url(../../images//header.png);
+	background-size: cover;
+	display: flex;
+	padding: rem(50) 0;
+	justify-content: center;
+	align-items: center;
+	margin-top: rem(80);
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		mix-blend-mode: multiply;
+		background-color: hsl(27deg 80% 69%);
+	}
+
+	&__body {
+		padding-bottom: rem(15);
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-inline: rem(-15);
+
+		@include laptop {
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		padding-right: rem(15);
+		&-wrapper {
+			padding-inline: rem(15);
+			width: 50%;
+			float: left;
+			flex: 0 0 50%;
+			max-width: 50%;
+
+			@include tablet {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__subtitle {
+		@include fluid-text(30, 18);
+		text-decoration: underline;
+		color: var(--color-light-yellow);
+
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__title {
+		@include fluid-text(60, 35);
+		color: var(--color-light);
+		text-shadow: 0.1em 0.1em 0 hsl(0, 91%, 5%);
+		font-weight: 900;
+
+		letter-spacing: rem(3);
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+
+		span {
+			color: #ffc15e;
+		}
+	}
+
+	&__description {
+		@include fluid-text(18, 14);
+		font-weight: 500;
+		margin-bottom: rem(30);
+		line-height: 1.9;
+
+		p {
+			color: var(--color-light);
+		}
+	}
+
+	&__image {
+		max-width: fluid(550, 345);
+		&-wrapper {
+			position: relative;
+			z-index: 1;
+			padding-inline: rem(15);
+			width: 50%;
+			float: left;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+}
