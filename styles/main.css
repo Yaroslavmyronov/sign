@@ -519,7 +519,7 @@ button[aria-label]::before {
 
 .hero {
   position: relative;
-  background: url(./images/header.png);
+  background: url("images/header.png");
   background-size: cover;
   display: flex;
   padding: 3.125rem 0;
